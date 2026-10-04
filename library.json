@@ -4,6 +4,8 @@
   "description": "Binary pack/unpack codec for AVR<->ESP32 RF mesh frames. Transport-agnostic and focused on fixed-size binary payload encoding/decoding.",
   "keywords": [
     "arduino",
+    "avr",
+    "esp32",
     "rf",
     "mesh",
     "codec",
@@ -15,6 +17,11 @@
       "name": "Bui Tuan Linh"
     }
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/buituanlinh/RfMeshCodec.git"
+  },
+  "license": "MIT",
   "frameworks": [
     "arduino"
   ],
@@ -23,8 +30,5 @@
   ],
   "examples": [
     "examples/*/*.ino"
-  ],
-  "headers": [
-    "src/RfMeshCodec.h"
   ]
 }
