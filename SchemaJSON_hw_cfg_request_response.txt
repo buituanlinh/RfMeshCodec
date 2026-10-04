@@ -1,0 +1,44 @@
+hw_cfg_request
+{
+  "type": "hw_cfg_request",
+  "device_uid": "AVR-001122AABBCC",
+  "ts": 1700000000
+}
+
+hw_cfg_response
+Payload OK (Bridge → retained)
+{
+  "type": "hw_cfg_response",
+  "ok": true,
+  "device_uid": "AVR-001122AABBCC",
+  "hw_cfg": { ... },
+  "hw_cfg_crc8": 63,
+  "ts": 1700000001
+}
+Required (OK): type, ok, device_uid, hw_cfg, hw_cfg_crc8
+
+Payload FAIL (Bridge → retained)
+{
+  "type": "hw_cfg_response",
+  "ok": false,
+  "device_uid": "AVR-001122AABBCC",
+  "error": "station_not_found",
+  "ts": 1700000001
+}
+Required (FAIL): type, ok, device_uid, error
+
+
+Chỉ các key dưới đây được tính vào CRC (nếu xuất hiện). Key khác → bỏ qua (không đưa vào TLV, không ảnh hưởng CRC).
+
+JSON key						TLV type			Data
+hw_cfg_version			0x40					u8
+hw_cfg_apply_mode		0x41					u8
+hw_cfg_epoch_ms			0x42					u32 LE
+gpio_in							0x43					packed table
+gpio_out						0x44					packed table
+pwm									0x45					packed table
+adc									0x46					packed table
+i2c									0x47					packed struct
+spi									0x48					packed struct
+uart								0x49					packed struct
+onewire							0x4A					packed table

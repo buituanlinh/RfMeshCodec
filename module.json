@@ -1,0 +1,22 @@
+{
+  "name": "RfMeshCodec",
+  "version": "0.1.0",
+  "description": "Binary pack/unpack codec for RF mesh protocol frames used across AVR and ESP32 devices.",
+  "type": "library",
+  "author": {
+    "name": "Bui Tuan Linh"
+  },
+  "keywords": [
+    "arduino",
+    "rf",
+    "mesh",
+    "codec",
+    "communication"
+  ],
+  "license": "unknown",
+  "files": [
+    "src/**",
+    "examples/**",
+    "README.md"
+  ]
+}
